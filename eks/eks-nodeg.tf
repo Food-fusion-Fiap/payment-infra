@@ -1,8 +1,8 @@
 resource "aws_eks_node_group" "node-group" {
   cluster_name    = aws_eks_cluster.eks-cluster.name
   node_group_name = "NG-${var.projectName}"
-  node_role_arn   = aws_iam_role.eks_role.arn
-  subnet_ids      = [local.aws_public_subnet_id, local.aws_public_subnet2_id]
+  node_role_arn   = var.lab_role_arn
+  subnet_ids      = [var.subnetA, var.subnetB, var.subnetC]
   disk_size       = 50
   instance_types  = [var.instanceType]
 
