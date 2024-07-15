@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraform-state-group-18" //TODO: create your S3 manually in aws
-    key    = "prod/terraform-postgres.tfstate"
+    key    = "prod/terraform-postgres.tfstate" //TODO: mudar para nomes especificos de cada microservico
     region = "us-east-1"
   }
 }

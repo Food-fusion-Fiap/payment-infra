@@ -19,7 +19,7 @@ data "terraform_remote_state" "rds_state" {
 
   config = {
     bucket = var.s3_bucket_name
-    key    = "prod/terraform-postgres.tfstate"
+    key    = "prod/terraform-postgres.tfstate" //TODO: mudar para nomes especificos de cada microservico
     region = "us-east-1"
   }
 }
