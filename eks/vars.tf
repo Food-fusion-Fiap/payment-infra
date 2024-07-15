@@ -38,20 +38,20 @@ variable "lab_role_arn" {
 /*Variables hardcoded, got from AWS Academy pre-created networks*/
 variable "vpc" {
   description = "VPC"
-  default     = "vpc-087b8de4d3c8c1017"
+  default     = "vpc-0fa670a93cef5c2de"
 }
 
 variable "subnetA" {
   description = "Subnet A"
-  default     = "subnet-0dce24d3e4a3acb3c"
+  default     = "subnet-0b404abac1af95985"
 }
 
 variable "subnetB" {
   description = "Subnet B"
-  default     = "subnet-03dc3c40655f5e92d"
+  default     = "subnet-0b2752081365c6e41"
 }
 
 variable "subnetC" {
   description = "Subnet C"
-  default     = "subnet-05f4a1c9e16b0a1c5"
+  default     = "subnet-0eeeb12770f48c913"
 }

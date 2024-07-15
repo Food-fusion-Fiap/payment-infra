@@ -13,17 +13,3 @@ data "aws_instance" "ec2" {
 
   depends_on = [aws_eks_node_group.node-group]
 }
-
-data "terraform_remote_state" "rds_state" {
-  backend = "s3"
-
-  config = {
-    bucket = var.s3_bucket_name
-    key    = "prod/terraform-postgres.tfstate" //TODO: mudar para nomes especificos de cada microservico
-    region = "us-east-1"
-  }
-}
-
-locals {
-  aws_rds_public_sg_id = data.terraform_remote_state.rds_state.outputs.rds_public_sg_id
-}
